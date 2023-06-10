@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsla(212, 23%, 69%, 0.425)
+}
+
+p {
+    font-weight: 500;
+    font-size: 11px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.b {
+    border: 1px solid red;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main_component {
+    width: 600px;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.content>p {
+    margin-top: 10px;
+}
+
+.content>h1 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
+
+.design_content p {
+    font-weight: 500;
+    font-size: 11px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.design_content h2 {
+    font-weight: 700;
+    font-size: 15px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.image {
+    width: 40%;
+    background: no-repeat center/cover url("./../assests/images/drawers.jpg");
+    border-radius: 10px 0 0 10px;
+}
+
+.right {
+    width: 60%;
+}
+
+.content {
+    padding: 1rem 1rem 0 1rem;
+}
+
+.design {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0.8rem 1rem;
+}
+
+.design .avtar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+}
+
+.design .design_content {
+    display: flex;
+    align-items: center;
+}
+
+.share {
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background-color: hsl(217, 19%, 35%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.share svg {
+    color: #6E8098;
+}
+
+.share_btns {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: hsl(217, 19%, 35%);
+    bottom: 4rem;
+    right: -3.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    width: 170px;
+
+}
+
+.share_btns p {
+    letter-spacing: 2px;
+    color: white;
+    font-weight: 500;
+}
+
+.share_btns::after {
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: hsl(217, 19%, 35%);
+    transform: rotate(45deg);
+    bottom: -0.4rem;
+}
+
+.hide {
+    display: none;
+}
+
+
+@media (max-width:610px) {
+    .main_component {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        margin: 1rem;
+    }
+
+    .image {
+        height: 200px;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .design {
+        max-width: 100%;
+    }
+
+    .share {
+        z-index: 2;
+    }
+
+    .share_btns {
+        bottom: 0;
+        left: 0;
+        height: 4rem;
+        border-radius: 0 0 10px 10px;
+        width: 100%;
+    }
+
+    .share_btns::after {
+        display: none;
+    }
+}
